@@ -1,0 +1,81 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = '' } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
+---
+
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} — GO!T</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL.href} />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <meta name="theme-color" content="#FFD711" />
+    <meta property="og:title" content={`${title} — GO!T`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_MX" />
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <a href="/" class="flex items-center gap-2 group">
+            <img src="/image_logo.png" alt="GO!T" class="h-10 w-auto group-hover:scale-105 transition-transform" />
+            <span class="text-xl font-black text-black">GO!T</span>
+          </a>
+          <a href="/" class="text-sm font-medium text-gray-600 hover:text-black transition-colors flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+            </svg>
+            Volver al inicio
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-24 lg:pt-28 pb-16 lg:pb-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-4">{title}</h1>
+          <div class="w-20 h-1.5 bg-primary rounded-full"></div>
+        </div>
+        <div class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-black prose-p:text-gray-600 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-black prose-li:text-gray-600">
+          <slot />
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <img src="/image_logo.png" alt="GO!T" class="h-8 w-auto" />
+          <span class="text-sm text-gray-400">&copy; {new Date().getFullYear()} GO!T. Todos los derechos reservados.</span>
+        </div>
+        <div class="flex gap-6 text-sm">
+          <a href="/privacy-policy" class="text-gray-400 hover:text-primary transition-colors">Privacidad</a>
+          <a href="/terms-of-service" class="text-gray-400 hover:text-primary transition-colors">Términos</a>
+          <a href="mailto:soporte@go-it.app" class="text-gray-400 hover:text-primary transition-colors">Contacto</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
