@@ -1,11 +1,11 @@
 ---
 const drivers = [
-  { name: 'Carlos', rating: '4.9', avatar: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>', trips: '2,450' },
-  { name: 'María', rating: '5.0', avatar: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>', trips: '1,890' },
-  { name: 'José', rating: '4.8', avatar: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>', trips: '3,120' },
-  { name: 'Ana', rating: '4.9', avatar: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>', trips: '1,560' },
-  { name: 'Luis', rating: '4.7', avatar: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>', trips: '2,780' },
-  { name: 'Elena', rating: '5.0', avatar: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>', trips: '2,340' },
+  { name: 'Carlos', rating: '4.9', avatar: '/driver-1.jpg', trips: '2,450' },
+  { name: 'María', rating: '5.0', avatar: '/driver-2.jpg', trips: '1,890' },
+  { name: 'José', rating: '4.8', avatar: '/driver-3.jpg', trips: '3,120' },
+  { name: 'Ana', rating: '4.9', avatar: '/driver-4.jpg', trips: '1,560' },
+  { name: 'Luis', rating: '4.7', avatar: '/driver-5.jpg', trips: '2,780' },
+  { name: 'Elena', rating: '5.0', avatar: '/driver-6.jpg', trips: '2,340' },
 ];
 ---
 
@@ -26,8 +26,11 @@ const drivers = [
           class="fade-up bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl hover:scale-105 transition-all duration-300"
           style={`transition-delay: ${index * 0.1}s;`}
         >
-          <div class="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg text-gray-700" set:html={driver.avatar}>
-          </div>
+          <img 
+            src={driver.avatar} 
+            alt={driver.name}
+            class="w-20 h-20 rounded-full object-cover mx-auto mb-4 shadow-lg border-2 border-primary/20"
+          />
           <h3 class="font-bold text-black mb-1">{driver.name}</h3>
           <div class="flex items-center justify-center gap-1 mb-2">
             <span class="text-primary">⭐</span>
