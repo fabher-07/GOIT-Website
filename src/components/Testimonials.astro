@@ -1,0 +1,79 @@
+---
+const testimonials = [
+  {
+    name: 'Carlos Gutiérrez',
+    role: '22 años de taxista',
+    rating: '4.9',
+    quote: 'Antes de GO!T apenas hacía 3 viajes al día. Ahora con la app, mi promedio subió a 12 viajes diarios. Mi familia vive más tranquila.',
+    highlight: 'Mis ingresos se duplicaron en 3 meses',
+    avatar: '👨‍🦳',
+    bgColor: 'from-blue-500/10 to-blue-600/5'
+  },
+  {
+    name: 'María Fernanda López',
+    role: 'Taxista verificada',
+    rating: '5.0',
+    quote: 'Como mujer taxista, encontrar una plataforma segura era difícil. GO!T me dio la confianza y el respeto que merezco.',
+    highlight: 'Ahora puedo trabajar tranquila',
+    avatar: '👩',
+    bgColor: 'from-purple-500/10 to-purple-600/5'
+  },
+  {
+    name: 'José Antonio Ramírez',
+    role: '30 años de taxista',
+    rating: '4.8',
+    quote: 'Mi concesión la saqué con sacrificio hace 30 años. GO!T me devolvió la dignidad y el respeto de mis clientes.',
+    highlight: 'Volví a sentir orgullo de mi trabajo',
+    avatar: '👴',
+    bgColor: 'from-green-500/10 to-green-600/5'
+  },
+];
+---
+
+<section class="py-20 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-4">
+        Casos de éxito <span class="text-primary">ilustrativos</span>
+      </h2>
+      <p class="fade-up text-lg text-gray-600 max-w-2xl mx-auto" style="transition-delay: 0.1s;">
+        Basados en promedios de taxistas verificados en nuestra plataforma
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      {testimonials.map((testimonial, index) => (
+        <div 
+          class={`fade-up bg-gradient-to-br ${testimonial.bgColor} border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300`}
+          style={`transition-delay: ${index * 0.1}s;`}
+        >
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-lg">
+              {testimonial.avatar}
+            </div>
+            <div>
+              <h3 class="font-bold text-lg text-black">{testimonial.name}</h3>
+              <p class="text-sm text-gray-600">{testimonial.role}</p>
+              <div class="flex items-center gap-1 mt-1">
+                <span class="text-primary text-lg">⭐</span>
+                <span class="font-bold text-black">{testimonial.rating}</span>
+              </div>
+            </div>
+          </div>
+
+          <blockquote class="text-gray-700 leading-relaxed mb-6 italic">
+            "{testimonial.quote}"
+          </blockquote>
+
+          <div class="bg-primary/20 border-l-4 border-primary rounded-r-xl p-4">
+            <p class="font-bold text-black text-sm">{testimonial.highlight}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="fade-up text-center text-sm text-gray-500 mt-12" style="transition-delay: 0.4s;">
+      *Casos ilustrativos basados en promedios reales. Los resultados individuales pueden variar según ciudad, horarios y dedicación.
+    </p>
+  </div>
+</section>

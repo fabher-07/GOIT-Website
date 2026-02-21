@@ -1,0 +1,104 @@
+---
+const profiles = [
+  {
+    name: 'Básico',
+    icon: '🚕',
+    trips: '4 viajes/día',
+    hours: '4-6 horas',
+    monthly: '$5,950',
+    features: ['Horario flexible', 'Fines de semana', 'Complemento de ingresos'],
+    color: 'border-gray-300 hover:border-gray-400'
+  },
+  {
+    name: 'Activo',
+    icon: '🚀',
+    trips: '8 viajes/día',
+    hours: '8-10 horas',
+    monthly: '$11,900',
+    features: ['Tiempo completo', 'Horarios pico', 'Ingresos estables'],
+    color: 'border-primary hover:border-yellow-500 bg-primary/5',
+    popular: true
+  },
+  {
+    name: 'Experto',
+    icon: '⭐',
+    trips: '12 viajes/día',
+    hours: '10-12 horas',
+    monthly: '$17,850',
+    features: ['Dedicación total', 'Máximas ganancias', 'Calificación alta'],
+    color: 'border-gray-300 hover:border-gray-400'
+  },
+];
+---
+
+<section class="py-20 lg:py-32 bg-black relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-1/4 left-0 w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">
+        ¿Cuánto podrías <span class="text-primary">ganar</span> como taxista?
+      </h2>
+      <p class="fade-up text-lg text-gray-400 max-w-2xl mx-auto" style="transition-delay: 0.1s;">
+        Elige tu perfil y descubre tu potencial de ingresos
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {profiles.map((profile, index) => (
+        <div 
+          class={`fade-up relative bg-white/5 backdrop-blur-sm border-2 ${profile.color} rounded-3xl p-8 transition-all duration-300 hover:scale-105`}
+          style={`transition-delay: ${index * 0.1}s;`}
+        >
+          {profile.popular && (
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-black font-black text-sm px-6 py-2 rounded-full shadow-lg">
+              MÁS POPULAR
+            </div>
+          )}
+
+          <div class="text-center mb-6">
+            <div class="text-5xl mb-4">{profile.icon}</div>
+            <h3 class="text-2xl font-black text-white mb-2">{profile.name}</h3>
+            <p class="text-gray-400 text-sm">{profile.trips}</p>
+            <p class="text-gray-500 text-xs">{profile.hours}</p>
+          </div>
+
+          <div class="text-center mb-6">
+            <div class="text-5xl font-black text-primary mb-2">{profile.monthly}</div>
+            <p class="text-gray-400 text-sm">Ingresos mensuales estimados</p>
+          </div>
+
+          <ul class="space-y-3">
+            {profile.features.map((feature) => (
+              <li class="flex items-center gap-3 text-gray-300">
+                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <p class="fade-up text-center text-sm text-gray-500 mt-12" style="transition-delay: 0.4s;">
+      *Ganancias estimadas basadas en tarifa promedio de $85 por viaje. Los resultados pueden variar según ciudad, horarios, demanda y dedicación.
+    </p>
+
+    <div class="fade-up text-center mt-8" style="transition-delay: 0.5s;">
+      <a 
+        href="#conductores" 
+        class="inline-flex items-center gap-2 bg-primary hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg shadow-primary/30"
+      >
+        <span>Quiero empezar a ganar</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

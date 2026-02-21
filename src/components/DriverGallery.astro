@@ -1,0 +1,74 @@
+---
+const drivers = [
+  { name: 'Carlos', rating: '4.9', avatar: '👨‍🦳', trips: '2,450' },
+  { name: 'María', rating: '5.0', avatar: '👩', trips: '1,890' },
+  { name: 'José', rating: '4.8', avatar: '👴', trips: '3,120' },
+  { name: 'Ana', rating: '4.9', avatar: '👩‍🦰', trips: '1,560' },
+  { name: 'Luis', rating: '4.7', avatar: '👨', trips: '2,780' },
+  { name: 'Elena', rating: '5.0', avatar: '👩‍🦱', trips: '2,340' },
+];
+---
+
+<section class="py-20 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-4">
+        Nuestra comunidad de <span class="text-primary">taxistas</span>
+      </h2>
+      <p class="fade-up text-lg text-gray-600 max-w-2xl mx-auto" style="transition-delay: 0.1s;">
+        Más de 500 taxistas verificados confían en GO!T para mejorar sus ingresos
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+      {drivers.map((driver, index) => (
+        <div 
+          class="fade-up bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-xl hover:scale-105 transition-all duration-300"
+          style={`transition-delay: ${index * 0.1}s;`}
+        >
+          <div class="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg">
+            {driver.avatar}
+          </div>
+          <h3 class="font-bold text-black mb-1">{driver.name}</h3>
+          <div class="flex items-center justify-center gap-1 mb-2">
+            <span class="text-primary">⭐</span>
+            <span class="font-bold text-sm text-black">{driver.rating}</span>
+          </div>
+          <p class="text-xs text-gray-600">{driver.trips} viajes</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="fade-up text-center" style="transition-delay: 0.7s;">
+      <a 
+        href="#conductores" 
+        class="inline-flex items-center gap-2 bg-black hover:bg-gray-900 text-white font-bold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+        </svg>
+        <span>Únete a la comunidad</span>
+      </a>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="fade-up grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16" style="transition-delay: 0.8s;">
+      <div class="text-center">
+        <div class="text-4xl font-black text-primary mb-2">500+</div>
+        <p class="text-sm text-gray-600">Taxistas verificados</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-black text-primary mb-2">15K+</div>
+        <p class="text-sm text-gray-600">Viajes completados</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-black text-primary mb-2">4.8</div>
+        <p class="text-sm text-gray-600">Calificación promedio</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-black text-primary mb-2">98%</div>
+        <p class="text-sm text-gray-600">Satisfacción</p>
+      </div>
+    </div>
+  </div>
+</section>

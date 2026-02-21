@@ -1,0 +1,51 @@
+---
+const metrics = [
+  { value: '+250%', label: 'Incremento en ingresos', sublabel: 'Perfil Activo', icon: '💰', color: 'from-green-500 to-emerald-600' },
+  { value: '+180%', label: 'Más viajes diarios', sublabel: 'vs. trabajo en calle', icon: '🚕', color: 'from-blue-500 to-cyan-600' },
+  { value: '+300%', label: 'Mejora en calificaciones', sublabel: 'Servicio de calidad', icon: '⭐', color: 'from-yellow-500 to-amber-600' },
+  { value: '4.8', label: 'Calificación promedio', sublabel: 'De taxistas verificados', icon: '🏆', color: 'from-purple-500 to-pink-600' },
+];
+---
+
+<section class="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-4">
+        Resultados que <span class="text-primary">hablan solos</span>
+      </h2>
+      <p class="fade-up text-lg text-gray-600 max-w-2xl mx-auto" style="transition-delay: 0.1s;">
+        Datos promedio de taxistas que confían en GO!T
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {metrics.map((metric, index) => (
+        <div 
+          class="fade-up bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100"
+          style={`transition-delay: ${index * 0.1}s;`}
+        >
+          <div class={`w-16 h-16 bg-gradient-to-br ${metric.color} rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+            {metric.icon}
+          </div>
+          <div class={`text-5xl font-black bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-3`}>
+            {metric.value}
+          </div>
+          <h3 class="font-bold text-lg text-black mb-1">{metric.label}</h3>
+          <p class="text-sm text-gray-600">{metric.sublabel}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="fade-up text-center mt-12" style="transition-delay: 0.5s;">
+      <a 
+        href="#conductores" 
+        class="inline-flex items-center gap-2 bg-black hover:bg-gray-900 text-white font-bold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+      >
+        <span>Ver cómo funciona</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
