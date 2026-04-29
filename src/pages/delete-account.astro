@@ -3,8 +3,8 @@ import LegalLayout from '../layouts/LegalLayout.astro';
 ---
 
 <LegalLayout 
-  title="Eliminar Cuenta y Datos - GO!T"
-  heading="Cómo Eliminar tu Cuenta de GO!T"
+  title="Eliminar Cuenta y Datos - Ride"
+  heading="Cómo Eliminar tu Cuenta de Ride"
 >
   <div class="space-y-8">
     <p class="text-lg text-gray-700">
@@ -19,7 +19,7 @@ import LegalLayout from '../layouts/LegalLayout.astro';
       </h2>
       <div class="bg-gray-50 rounded-xl p-6 space-y-3">
         <ol class="space-y-3 list-decimal list-inside text-gray-700">
-          <li>Abre la app GO!T</li>
+          <li>Abre la app Ride</li>
           <li>Ve a tu <strong>Perfil</strong> o <strong>Configuración</strong></li>
           <li>Selecciona <strong>"Configuración de Cuenta"</strong> o <strong>"Mi Cuenta"</strong></li>
           <li>Desplázate hasta el final y toca <strong>"Eliminar Cuenta"</strong></li>
@@ -38,7 +38,7 @@ import LegalLayout from '../layouts/LegalLayout.astro';
       </h2>
       <div class="bg-gray-50 rounded-xl p-6 space-y-4">
         <ol class="space-y-3 list-decimal list-inside text-gray-700">
-          <li>Envía un correo a <a href="mailto:support@go-it.app" class="text-primary font-semibold hover:underline">support@go-it.app</a></li>
+          <li>Envía un correo a <a href="mailto:soporte@ride-app-taxi.com" class="text-primary font-semibold hover:underline">soporte@ride-app-taxi.com</a></li>
           <li>Asunto: <strong>"Solicitud de Eliminación de Cuenta"</strong></li>
           <li>Incluye en el mensaje:
             <ul class="ml-8 mt-2 space-y-1 list-disc">
@@ -190,7 +190,7 @@ import LegalLayout from '../layouts/LegalLayout.astro';
         Si tienes dudas o problemas con el proceso de eliminación, contáctanos:
       </p>
       <a 
-        href="mailto:support@go-it.app" 
+        href="mailto:soporte@ride-app-taxi.com" 
         class="inline-block bg-primary hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg transition-colors"
       >
         Contactar Soporte
@@ -215,10 +215,10 @@ import LegalLayout from '../layouts/LegalLayout.astro';
       const body = `Correo electrónico registrado: ${email}\nNúmero de teléfono: ${phone || 'No proporcionado'}\nRazón: ${reason || 'No proporcionada'}`;
       
       // Abrir cliente de correo
-      window.location.href = `mailto:support@go-it.app?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:soporte@ride-app-taxi.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       
       // Mostrar mensaje de confirmación
-      alert('Se abrirá tu cliente de correo para enviar la solicitud. Si no se abre automáticamente, envía un correo a support@go-it.app con tu información.');
+      alert('Se abrirá tu cliente de correo para enviar la solicitud. Si no se abre automáticamente, envía un correo a soporte@ride-app-taxi.com con tu información.');
     });
   }
 </script>

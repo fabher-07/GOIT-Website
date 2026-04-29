@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { title, description = '' } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
+const canonicalURL = new URL(Astro.url.pathname, 'https://ride-app-taxi.com');
 ---
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} — GO!T</title>
+    <title>{title} — Ride</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL.href} />
     <meta name="robots" content="index, follow" />
@@ -28,7 +28,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <meta name="theme-color" content="#FFD711" />
-    <meta property="og:title" content={`${title} — GO!T`} />
+    <meta property="og:title" content={`${title} — Ride`} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_MX" />
@@ -39,8 +39,8 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
           <a href="/" class="flex items-center gap-2 group">
-            <img src="/image_logo.png" alt="GO!T" class="h-10 w-auto group-hover:scale-105 transition-transform" />
-            <span class="text-xl font-black text-black">GO!T</span>
+            <img src="/image_logo.png" alt="Ride" class="h-10 w-auto group-hover:scale-105 transition-transform" />
+            <span class="text-xl font-black text-black">Ride</span>
           </a>
           <a href="/" class="text-sm font-medium text-gray-600 hover:text-black transition-colors flex items-center gap-1">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -69,13 +69,13 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
     <footer class="bg-black text-white py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-2">
-          <img src="/image_logo.png" alt="GO!T" class="h-8 w-auto" />
-          <span class="text-sm text-gray-400">&copy; {new Date().getFullYear()} GO!T. Todos los derechos reservados.</span>
+          <img src="/image_logo.png" alt="Ride" class="h-8 w-auto" />
+          <span class="text-sm text-gray-400">&copy; {new Date().getFullYear()} Ride. Todos los derechos reservados.</span>
         </div>
         <div class="flex gap-6 text-sm">
           <a href="/privacy-policy" class="text-gray-400 hover:text-primary transition-colors">Privacidad</a>
           <a href="/terms-of-service" class="text-gray-400 hover:text-primary transition-colors">Términos</a>
-          <a href="mailto:soporte@go-it.app" class="text-gray-400 hover:text-primary transition-colors">Contacto</a>
+          <a href="mailto:soporte@ride-app-taxi.com" class="text-gray-400 hover:text-primary transition-colors">Contacto</a>
         </div>
       </div>
     </footer>

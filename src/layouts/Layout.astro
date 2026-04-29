@@ -9,11 +9,11 @@ interface Props {
 
 const {
   title,
-  description = 'GO!T - La app 100% mexicana que conecta pasajeros con taxistas legales. Hecha en México para devolver al taxista mexicano el lugar que merece.',
+  description = 'Ride - La app 100% mexicana que conecta pasajeros con taxistas legales. Hecha en México para devolver al taxista mexicano el lugar que merece.',
   ogImage = '/og-image.png'
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
+const canonicalURL = new URL(Astro.url.pathname, 'https://ride-app-taxi.com');
 ---
 
 <!DOCTYPE html>
@@ -28,8 +28,8 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL.href} />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="GO!T" />
-    <meta name="keywords" content="taxi, México, app mexicana, taxista legal, concesión, transporte, GO!T, Puebla, taxi seguro, hecho en México" />
+    <meta name="author" content="Ride" />
+    <meta name="keywords" content="taxi, México, app mexicana, taxista legal, concesión, transporte, Ride, Puebla, taxi seguro, hecho en México" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -38,7 +38,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content="es_MX" />
-    <meta property="og:site_name" content="GO!T" />
+    <meta property="og:site_name" content="Ride" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -47,10 +47,8 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://go-it.app');
     <meta name="twitter:image" content={ogImage} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
-    <link rel="shortcut icon" href="/favicon.ico?v=3" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+    <link rel="icon" type="image/png" href="/favicon12.png?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://go-it.app/sitemap.xml
+Sitemap: https://ride-app-taxi.com/sitemap.xml
