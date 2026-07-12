@@ -2,14 +2,30 @@
 import LegalLayout from '../layouts/LegalLayout.astro';
 ---
 
-<LegalLayout 
-  title="Eliminar Cuenta y Datos - Ride"
-  heading="Cómo Eliminar tu Cuenta de Ride"
->
+<LegalLayout title="Eliminar Cuenta y Datos - RIDE">
   <div class="space-y-8">
     <p class="text-lg text-gray-700">
       Entendemos que puedes necesitar eliminar tu cuenta. A continuación, te explicamos las diferentes opciones disponibles para hacerlo.
     </p>
+
+    <!-- Antes de eliminar -->
+    <section class="bg-yellow-50 border-l-4 border-primary p-6 rounded-xl">
+      <h2 class="text-xl font-bold text-black mb-4">Antes de eliminar tu cuenta, ten en cuenta lo siguiente:</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start gap-2">
+          <span class="text-primary mt-1 font-bold">•</span>
+          <span>Si eres conductor y tienes saldo a favor en tu wallet digital, deberás solicitarlo a soporte antes de eliminar tu cuenta.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary mt-1 font-bold">•</span>
+          <span>Si tienes deudas pendientes (saldo negativo en tu wallet), deberás regularizarlas antes de eliminar tu cuenta.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-primary mt-1 font-bold">•</span>
+          <span>Por obligaciones fiscales y legales (SAT, LFPDPPP), los registros de viajes y facturas (CFDI) se conservarán de forma anonimizada por 5 años después de la eliminación de tu cuenta.</span>
+        </li>
+      </ul>
+    </section>
 
     <!-- Opción 1 -->
     <section>
@@ -19,13 +35,13 @@ import LegalLayout from '../layouts/LegalLayout.astro';
       </h2>
       <div class="bg-gray-50 rounded-xl p-6 space-y-3">
         <ol class="space-y-3 list-decimal list-inside text-gray-700">
-          <li>Abre la app Ride</li>
-          <li>Ve a tu <strong>Perfil</strong> o <strong>Configuración</strong></li>
-          <li>Selecciona <strong>"Configuración de Cuenta"</strong> o <strong>"Mi Cuenta"</strong></li>
-          <li>Desplázate hasta el final y toca <strong>"Eliminar Cuenta"</strong></li>
-          <li>Confirma tu decisión leyendo la advertencia</li>
-          <li>Toca <strong>"Confirmar Eliminación"</strong></li>
-          <li>Tu cuenta y todos los datos asociados serán eliminados permanentemente en un plazo de <strong>30 días</strong></li>
+          <li>Abre la app RIDE.</li>
+          <li>Ve a tu <strong>Perfil</strong> o <strong>Configuración</strong>.</li>
+          <li>Selecciona <strong>"Configuración de Cuenta"</strong> o <strong>"Mi Cuenta"</strong>.</li>
+          <li>Desplázate hasta el final y toca <strong>"Eliminar Cuenta"</strong>.</li>
+          <li>Confirma tu decisión leyendo la advertencia.</li>
+          <li>Toca <strong>"Confirmar Eliminación"</strong>.</li>
+          <li>Tu cuenta será eliminada en un plazo de <strong>30 días</strong>. Los registros de viajes se conservarán de forma anonimizada por 5 años por obligaciones fiscales.</li>
         </ol>
       </div>
     </section>
@@ -47,8 +63,8 @@ import LegalLayout from '../layouts/LegalLayout.astro';
               <li>Razón de eliminación (opcional)</li>
             </ul>
           </li>
-          <li>Recibirás una confirmación en un plazo de <strong>48-72 horas</strong></li>
-          <li>Tu cuenta será eliminada permanentemente en un plazo de <strong>30 días</strong></li>
+          <li>Recibirás una confirmación en un plazo de <strong>24-48 horas</strong>.</li>
+          <li>Tu cuenta será eliminada en un plazo de <strong>30 días</strong> (los registros de viajes se conservarán anonimizados por 5 años por obligaciones fiscales).</li>
         </ol>
       </div>
     </section>
@@ -61,10 +77,10 @@ import LegalLayout from '../layouts/LegalLayout.astro';
       </h2>
       <div class="bg-gray-50 rounded-xl p-6 space-y-4">
         <ol class="space-y-3 list-decimal list-inside text-gray-700">
-          <li>Completa el formulario a continuación con tu información</li>
-          <li>Haz clic en <strong>"Enviar Solicitud"</strong></li>
-          <li>Recibirás un correo de confirmación</li>
-          <li>Tu cuenta será eliminada en un plazo de <strong>30 días</strong></li>
+          <li>Completa el formulario a continuación con tu información.</li>
+          <li>Haz clic en <strong>"Enviar Solicitud"</strong>.</li>
+          <li>Recibirás un correo de confirmación en un plazo de <strong>24-48 horas</strong>.</li>
+          <li>Tu cuenta será eliminada en un plazo de <strong>30 días</strong>. Los registros de viajes se conservarán de forma anonimizada por 5 años por obligaciones fiscales.</li>
         </ol>
 
         <!-- Formulario -->
@@ -111,7 +127,7 @@ import LegalLayout from '../layouts/LegalLayout.astro';
 
           <div class="bg-yellow-50 border-l-4 border-primary p-4 rounded">
             <p class="text-sm text-gray-700">
-              <strong>⚠️ Advertencia:</strong> Esta acción es permanente y no se puede deshacer. Asegúrate de haber leído toda la información antes de continuar.
+              <strong>Nota importante:</strong> Si tienes saldo a favor en tu wallet, por favor contáctanos antes de eliminar tu cuenta para procesar tu retiro. Si tienes deudas pendientes, deberás regularizarlas antes de proceder.
             </p>
           </div>
 
@@ -125,72 +141,14 @@ import LegalLayout from '../layouts/LegalLayout.astro';
       </div>
     </section>
 
-    <!-- Qué datos se eliminan -->
-    <section class="bg-blue-50 rounded-xl p-6">
-      <h2 class="text-2xl font-bold text-black mb-4">
-        📋 Qué Datos se Eliminan
-      </h2>
-      <ul class="space-y-2 text-gray-700">
-        <li class="flex items-start gap-2">
-          <span class="text-primary mt-1">✓</span>
-          <span>Información de perfil (nombre, email, teléfono)</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-primary mt-1">✓</span>
-          <span>Historial de viajes</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-primary mt-1">✓</span>
-          <span>Métodos de pago guardados</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-primary mt-1">✓</span>
-          <span>Preferencias y configuraciones</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-primary mt-1">✓</span>
-          <span>Datos de ubicación históricos</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-primary mt-1">✓</span>
-          <span>Cualquier otro dato personal asociado a tu cuenta</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Importante -->
-    <section class="bg-red-50 border-2 border-red-200 rounded-xl p-6">
-      <h2 class="text-2xl font-bold text-red-900 mb-4">
-        ⚠️ Importante
-      </h2>
-      <ul class="space-y-3 text-gray-700">
-        <li class="flex items-start gap-2">
-          <span class="text-red-600 mt-1 font-bold">•</span>
-          <span>La eliminación es <strong>permanente</strong> y <strong>no se puede deshacer</strong></span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-red-600 mt-1 font-bold">•</span>
-          <span>No podrás recuperar tu cuenta después de la eliminación</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-red-600 mt-1 font-bold">•</span>
-          <span>Si tienes viajes pendientes o pagos en proceso, debes resolverlos antes de eliminar tu cuenta</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-red-600 mt-1 font-bold">•</span>
-          <span>El proceso de eliminación puede tardar hasta <strong>30 días</strong> en completarse</span>
-        </li>
-      </ul>
-    </section>
-
     <!-- Contacto -->
     <section class="text-center bg-gray-50 rounded-xl p-6">
       <h3 class="text-xl font-bold text-black mb-3">¿Necesitas Ayuda?</h3>
       <p class="text-gray-700 mb-4">
         Si tienes dudas o problemas con el proceso de eliminación, contáctanos:
       </p>
-      <a 
-        href="mailto:soporte@ride-app-taxi.com" 
+      <a
+        href="mailto:soporte@ride-app-taxi.com"
         class="inline-block bg-primary hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg transition-colors"
       >
         Contactar Soporte

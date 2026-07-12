@@ -6,8 +6,8 @@ const benefits = [
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
   },
   {
-    title: 'Taxistas legales con concesión',
-    description: 'Todos nuestros taxistas están legalmente dados de alta en el sistema oficial de México. Concesión vigente y documentos verificados.',
+    title: 'Taxistas verificados',
+    description: 'Todos nuestros taxistas están legalmente registrados, con licencia vigente y documentos verificados.',
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
   },
   {
@@ -16,14 +16,9 @@ const benefits = [
     icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
   },
   {
-    title: 'Pagos seguros con tarjeta',
-    description: 'Paga con tarjeta de crédito o débito directamente en la app. Tecnología segura, sin efectivo.',
-    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>`,
-  },
-  {
-    title: 'Facturación electrónica (CFDI)',
-    description: 'Genera tu factura fiscal directamente desde la app. Servicio formal, como debe ser.',
-    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+    title: 'Paga en efectivo',
+    description: 'Sin necesidad de tarjeta. Paga directamente al taxista al finalizar tu viaje. Simple, rápido y sin complicaciones.',
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>`,
   },
 ];
 ---
@@ -75,13 +70,7 @@ const benefits = [
                 </div>
                 <div>
                   <div class="font-bold text-black">Carlos M.</div>
-                  <div class="text-sm text-gray-400">Taxista con concesión</div>
-                </div>
-                <div class="ml-auto flex items-center gap-1">
-                  <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <span class="font-bold text-sm">4.9</span>
+                  <div class="text-sm text-gray-400">Taxista con licencia oficial ★ 4.9</div>
                 </div>
               </div>
 
@@ -98,7 +87,7 @@ const benefits = [
                 </div>
               </div>
 
-              <div class="flex items-center justify-between bg-gray-50 rounded-2xl p-4">
+              <div class="flex items-center justify-between bg-gray-50 rounded-2xl p-4 mb-4">
                 <div>
                   <div class="text-xs text-gray-400">Tarifa estimada</div>
                   <div class="text-2xl font-black text-black">$85 <span class="text-sm font-normal text-gray-400">MXN</span></div>
@@ -107,6 +96,11 @@ const benefits = [
                   <div class="text-xs text-gray-400">Tiempo</div>
                   <div class="text-lg font-bold text-black">15 min</div>
                 </div>
+              </div>
+
+              <div class="flex items-center gap-2 bg-gray-50 rounded-2xl p-4">
+                <span class="text-xl">💵</span>
+                <span class="font-bold text-black">Pago en efectivo</span>
               </div>
             </div>
 
